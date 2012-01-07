@@ -35,8 +35,8 @@
 "
 " For example include into your .vimrc:
 "
-" au BufRead,BufNewFile *.php inoremap <buffer> <C-P> :call PhpDoc()<CR>
-" au BufRead,BufNewFile *.php nnoremap <buffer> <C-P> :call PhpDoc()<CR>
+" au BufRead,BufNewFile *.php inoremap <buffer> <C-P> :call PhpDocSingle()<CR>
+" au BufRead,BufNewFile *.php nnoremap <buffer> <C-P> :call PhpDocSingle()<CR>
 " au BufRead,BufNewFile *.php vnoremap <buffer> <C-P> :call PhpDocRange()<CR>
 "
 " This will map <ctrl>+p to call the functions to create the docblocks for the
