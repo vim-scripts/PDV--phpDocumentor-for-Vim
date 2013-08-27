@@ -102,7 +102,9 @@ let g:pdv_cfg_License = (exists("g:pdv_cfg_License")) ? g:pdv_cfg_License : "lic
 let g:pdv_cfg_Version = (exists("g:pdv_cfg_Version")) ? g:pdv_cfg_Version : "$Id$"
 
 " Set the order and inclusion of tags for classes
-let g:pdv_cfg_ClassTags = ["package","author","version"]
+if ! exists('g:pdv_cfg_ClassTags')
+	let g:pdv_cfg_ClassTags = ["package","author","version"]
+endif
 
 " Default var type
 let g:pdv_cfg_Type = "mixed"
