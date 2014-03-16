@@ -512,7 +512,7 @@ func! PhpDocDefault()
     exe "norm! " . commentline . "G$"
 
     " Local indent
-    let l:txtBOL = g:pdv_cfg_BOL . indent
+    let l:txtBOL = g:pdv_cfg_BOL . l:indent
 
     exe l:txtBOL . g:pdv_cfg_CommentHead . g:pdv_cfg_EOL
     exe l:txtBOL . g:pdv_cfg_Commentn . g:pdv_cfg_EOL
