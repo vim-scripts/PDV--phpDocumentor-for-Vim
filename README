@@ -7,7 +7,34 @@ Forked From https://github.com/vim-scripts/PDV--phpDocumentor-for-Vim
 
 
 
+## Install
+
+### Pathogen
+
+Clone the repository under your `~/.vim/bundle/` directory:
+
 ```
+ cd ~/.vim/bundle
+ git clone git://github.com/shawncplus/phpcomplete.vim.git
+```
+
+### Vundle
+
+1. Install and configure the [Vundle](https://github.com/gmarik/vundle) plugin manager, [follow the instructions here](https://github.com/gmarik/vundle#quick-start)
+
+2. Add the following line to your `.vimrc`:
+
+   ```
+    Plugin 'liulipeng/PDV--phpDocumentor-for-Vim'
+   ```
+
+3. Source your `.vimrc` with `:so %` or otherwise reload your vim
+
+4. Run the `:PluginInstall` commmand
+
+## Usage
+
+```sh
 " 设置版本、作者、版权等信息
 let g:pdv_cfg_type="mixed"
 let g:pdv_cfg_package="1.0"
@@ -23,7 +50,6 @@ let g:pdv_cfg_uses=0
 
 nnoremap <leader>doc :call phpdocsingle()<cr>
 vnoremap <leader>doc :call phpdocrange()<cr>
-
 ```
 
 
