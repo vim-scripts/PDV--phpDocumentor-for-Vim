@@ -40,8 +40,8 @@ Clone the repository under your `~/.vim/bundle/` directory:
 let g:pdv_cfg_type="mixed"
 let g:pdv_cfg_package="1.0"
 let g:pdv_cfg_version="1.0"
-let g:pdv_cfg_author="lipeng liu <liulipeng@jiayunhui.com>"
-let g:pdv_cfg_copyright="1997-2017 the jiayunhui group"
+let g:pdv_cfg_author="Lipeng Liu <liulipeng@xxx.com>"
+let g:pdv_cfg_copyright="1997-2017 the xxx group"
 let g:pdv_cfg_license="php version 7.1"
 
 " 注释结束设置
