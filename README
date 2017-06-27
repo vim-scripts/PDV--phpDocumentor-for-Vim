@@ -3,7 +3,7 @@ PDV (phpDocumentor for Vim)
 
 Forked From https://github.com/vim-scripts/PDV--phpDocumentor-for-Vim
 
-本项目从`vim-scripts/PDV--phpDocumentor-for-Vim`修改，新增支持PHP7版本
+本项目从 `vim-scripts/PDV--phpDocumentor-for-Vim` 修改，新增支持PHP7版本
 
 
 
@@ -12,6 +12,7 @@ Forked From https://github.com/vim-scripts/PDV--phpDocumentor-for-Vim
 ### Pathogen
 
 Clone the repository under your `~/.vim/bundle/` directory:
+
 
 ```
  cd ~/.vim/bundle
@@ -34,7 +35,7 @@ Clone the repository under your `~/.vim/bundle/` directory:
 
 ## Usage
 
-```sh
+``` sh
 " 设置版本、作者、版权等信息
 let g:pdv_cfg_type="mixed"
 let g:pdv_cfg_package="1.0"
