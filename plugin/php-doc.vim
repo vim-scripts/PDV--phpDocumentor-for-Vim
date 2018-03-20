@@ -75,17 +75,17 @@ let g:pdv_cfg_CommentTail = " */"
 let g:pdv_cfg_CommentSingle = "//"
 
 " Default values
-let g:pdv_cfg_Type = "mixed"
-let g:pdv_cfg_Package = ""
-let g:pdv_cfg_Version = "$id$"
-let g:pdv_cfg_Author = "Tobias Schlitt <toby@php.net>"
-let g:pdv_cfg_Copyright = "1997-2005 The PHP Group"
-let g:pdv_cfg_License = "PHP Version 3.0 {@link http://www.php.net/license/3_0.txt}"
+let g:pdv_cfg_Type = get(g:, 'pdv_cfg_Type', "mixed")
+let g:pdv_cfg_Package = get(g:, 'pdv_cfg_Package', "")
+let g:pdv_cfg_Version = get(g:, 'pdv_cfg_Version', "$id$")
+let g:pdv_cfg_Author = get(g:,  'pdv_cfg_Author', "Tobias Schlitt <toby@php.net>")
+let g:pdv_cfg_Copyright = get(g:, 'pdv_cfg_Copyright', "1997-2005 The PHP Group")
+let g:pdv_cfg_License = get(g:, 'pdv_cfg_License', "PHP Version 3.0 {@link http://www.php.net/license/3_0.txt}")
 
 let g:pdv_cfg_ReturnVal = "void"
 
 " Wether to create @uses tags for implementation of interfaces and inheritance
-let g:pdv_cfg_Uses = 1
+let g:pdv_cfg_Uses = get(g:, 'pdv_cfg_Uses', 1)
 
 " Options
 " :set paste before documenting (1|0)? Recommended.
