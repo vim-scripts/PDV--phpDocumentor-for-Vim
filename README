@@ -1,27 +1,28 @@
 This is a mirror of http://www.vim.org/scripts/script.php?script_id=1355
 
-PDV (phpDocumentor for Vim)
-========================
+============================
+PHP Documentor for Vim (pdv)
+Version: 1.1.1
+Last Change: 2011-11-19
+Author: Tobias Schlitt <toby@php.net>
+License: Provided under the GPL (http://www.gnu.org/copyleft/gpl.html).
 
-Version: 1.0.0
-
-Copyright 2005 by Tobias Schlitt <toby@php.net>
+Copyright 2005-2011 by Tobias Schlitt <toby@php.net>
 Inspired by phpDoc script for Vim by Vidyut Luther (http://www.phpcult.com/).
 
-Provided under the GPL (http://www.gnu.org/copyleft/gpl.html).
-
-This script provides functions to generate phpDocumentor conform
-documentation blocks for your PHP code. The script currently
-documents:
+Description:
+============
+This script provides functions to generate docblocks for your PHP code that
+conform to the phpDocumentor format. The script currently documents:
 
 - Classes
 - Methods/Functions
-- Attributes
+- Attributes/Properties
 
 All of those supporting all PHP 4 and 5 syntax elements.
 
 Beside that it allows you to define default values for phpDocumentor tags
-like @version (I use $id$ here), @author, @license and so on.
+like @version (I use $Id$ here), @author, @license and so on.
 
 For function/method parameters and attributes, the script tries to guess the
 type as good as possible from PHP5 type hints or default values (array, bool,
@@ -31,12 +32,50 @@ You can use this script by mapping the function PhpDoc() to any
 key combination. Hit this on the line where the element to document
 resides and the doc block will be created directly above that line.
 
-Changelog
-=========
+Installation:
+=============
+
+For example include into your .vimrc:
+
+au BufRead,BufNewFile *.php inoremap <buffer> <C-P> :call PhpDoc()<CR>
+au BufRead,BufNewFile *.php nnoremap <buffer> <C-P> :call PhpDoc()<CR>
+au BufRead,BufNewFile *.php vnoremap <buffer> <C-P> :call PhpDocRange()<CR>
+
+This will map <ctrl>+p to call the functions to create the docblocks for the
+item on the line where the cursor is, or in visual mode, any applicable lines
+within that range.
+
+In your .vimrc you can also set the defaults for one or more of the PHP
+docblock tags:
+let g:pdv_cfg_Package = 'YourPackage'
+let g:pdv_cfg_Author = 'Your Name <your.name@exampld.com>'
+
+In you .vimrc, you can also specify the tags and the order they appear for
+class docblocks:
+let g:pdv_cfg_ClassTags = ["package","author","version"]
+
+Changelog:
+==========
 
 Version 1.0.0
--------------------
+-------------
+ * Created the initial version of this script while playing around with VIM
+ scripting the first time and trying to fix Vidyut's solution, which
+ resulted in a complete rewrite.
 
-* Created the initial version of this script while playing around with VIM
-   scripting the first time and trying to fix Vidyut's solution, which
-   resulted in a complete rewrite.
+Version 1.0.1
+-------------
+ * Fixed issues when using tabs instead of spaces.
+ * Fixed some parsing bugs when using a different coding style.
+
+Version 1.1.0
+-------------
+ * Fixed bug with call-by-reference parameters.
+
+Version 1.1.1
+-------------
+ * Updated implementation to allow for better defaults, handle custom sort
+ order and inclusion of tags for classes
+ * Corrected detection of bool var types
+ * Corrected detection of float var types
+ * Moved to ftplugin and updated usage instructions
